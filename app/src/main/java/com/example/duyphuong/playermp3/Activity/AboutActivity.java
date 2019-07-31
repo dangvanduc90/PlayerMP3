@@ -30,7 +30,7 @@ public class AboutActivity extends AppCompatActivity {
         lvIcon = (ListView) findViewById(R.id.lv_about_us);
         dsContents = new ArrayList<>();
 
-        dsContents.add(new Contents("Player Mp3","Made by BHT",R.drawable.icon));
+        dsContents.add(new Contents("Player Mp3","Made by dangduc",R.drawable.icon));
         dsContents.add(new Contents("Lập trình di động nâng cao","",android.R.drawable.star_on));
         dsContents.add(new Contents("Build Version","Version 1.0",android.R.drawable.ic_dialog_info));
         dsContents.add(new Contents("Email","buihuuthang97tb@gmail.com",android.R.drawable.ic_dialog_email));
