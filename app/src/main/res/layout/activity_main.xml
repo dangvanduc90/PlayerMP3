@@ -31,6 +31,7 @@
         android:layout_marginTop="85dp"
         android:contentDescription="@string/image_content_description"
         android:scaleType="centerCrop"
+        android:visibility="gone"
         android:src="@drawable/audiopause" />
     <!--<ImageView-->
         <!--android:id="@+id/imgCenter"-->
