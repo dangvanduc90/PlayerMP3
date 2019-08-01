@@ -65,15 +65,14 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
                 String keyword = editable.toString();
 //                String keyword = edtKeyword.getText().toString().trim();
                 int text_length = keyword.length();
-                Log.d("111", keyword);
-                Log.d("111", data.size() + "");
+                ArrayList data = MainActivity.arrSong;
 
                 dataNew.clear();
                 if (text_length > 0) {
                     for (int i = 0; i < data.size(); i++) {
-                        Log.d("111", "data");
 
                         SongModel mCongViec = (SongModel) data.get(i);
+                        Log.d("111", mCongViec.getTitle());
 
                         if (mCongViec.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
                             dataNew.add(mCongViec);
@@ -82,7 +81,8 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
                 } else {
                     dataNew.addAll(data);
                 }
-                listSongAdapter.notifyDataSetChanged();
+                listSongAdapter = new ListSongAdapter(ActivityListSongs.this, dataNew);
+                lvListSong.setAdapter(listSongAdapter);
             }
         });
     }
@@ -97,9 +97,9 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
             setSupportActionBar(toolbar);
 
         data =  MainActivity.arrSong;
-        dataNew = data;
+        dataNew = new ArrayList();
 
-        listSongAdapter = new ListSongAdapter(this, dataNew);
+        listSongAdapter = new ListSongAdapter(this, data);
         lvListSong.setAdapter(listSongAdapter);
         lvListSong.setOnItemClickListener(this);
 
