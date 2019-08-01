@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     public static Toolbar toolbar;
 
     public static ArrayList<SongModel> arrSong = new ArrayList<>();
+    public static ArrayList<SongModel> arrSongFav = new ArrayList<>();
 
 //    SongModel song = new SongModel();
 

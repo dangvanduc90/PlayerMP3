@@ -15,6 +15,15 @@
         android:layout_gravity="center"
         app:srcCompat="@drawable/song" />
 
+    <ImageView
+        android:layout_margin="20px"
+        android:id="@+id/imgFavsong"
+        android:layout_width="79dp"
+        android:layout_height="100px"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/checked" />
+
     <TextView
         android:id="@+id/tvSongName"
         android:layout_width="match_parent"
