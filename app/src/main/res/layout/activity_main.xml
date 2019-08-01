@@ -72,6 +72,16 @@
         android:layout_marginRight="10dp"
         android:layout_alignParentLeft="true" />
 
+
+    <Button
+        android:id="@+id/btnFav"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/seekBarContent"
+        android:gravity="center"
+        android:text="Danh sach yeu thich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <RelativeLayout
         android:id="@+id/relativeLayoutControl"
         android:layout_width="match_parent"

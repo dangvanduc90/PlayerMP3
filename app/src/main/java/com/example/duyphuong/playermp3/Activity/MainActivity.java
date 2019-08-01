@@ -47,6 +47,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.duyphuong.playermp3.Adapter.SongsManager;
+import com.example.duyphuong.playermp3.FavActivity;
 import com.example.duyphuong.playermp3.Model.SongModel;
 import com.example.duyphuong.playermp3.R;
 import com.example.duyphuong.playermp3.Utility.FIleUtils;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button btnMaxAudio;
     private Button btnTimer;
     private Button btnMore;
+    private Button btnFav;
     public static Boolean RepeatThisSong = false;
     public static Boolean RandomSong = false;
     public static ImageView imageViewCenter;
@@ -132,6 +134,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         btnMaxAudio = findViewById(R.id.btnMaxAudio);
         btnTimer = findViewById(R.id.btnTimer);
         btnMore  = findViewById(R.id.btnMore);
+        btnFav  = findViewById(R.id.btnFav);
     }
 
     public void loadEvents() {
@@ -151,6 +154,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         btnMaxAudio.setOnClickListener(this);
         btnTimer.setOnClickListener(this);
         btnMore.setOnClickListener(this);
+        btnFav.setOnClickListener(this);
         imageViewCenter = findViewById(R.id.imgCenter);
         seekBar.setOnSeekBarChangeListener(this);
 
@@ -527,6 +531,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         if (id == R.id.btnMore) {
             Intent intent = new Intent(this, EqualizerActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.btnFav) {
+            Intent intent = new Intent(this, FavActivity.class);
             startActivity(intent);
         }
         if (id == R.id.tvClickCustomTimer) {

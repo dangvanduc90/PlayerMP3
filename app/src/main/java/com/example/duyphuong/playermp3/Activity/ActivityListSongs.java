@@ -98,13 +98,6 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
         data =  MainActivity.arrSong;
         dataNew = new ArrayList();
 
-        // CHOICE_MODE_NONE: Không cho phép lựa chọn (Mặc định).
-        // ( listView.setItemChecked(..) không làm việc với CHOICE_MODE_NONE).
-        // CHOICE_MODE_SINGLE: Cho phép một lựa chọn.
-        // CHOICE_MODE_MULTIPLE: Cho phép nhiều lựa chọn.
-        // CHOICE_MODE_MULTIPLE_MODAL: Cho phép nhiều lựa chọn trên Modal Selection Mode.
-        lvListSong.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-
         listSongAdapter = new ListSongAdapter(this, data);
         lvListSong.setAdapter(listSongAdapter);
         lvListSong.setOnItemClickListener(this);
