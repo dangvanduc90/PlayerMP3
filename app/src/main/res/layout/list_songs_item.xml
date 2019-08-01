@@ -15,21 +15,17 @@
         android:layout_gravity="center"
         app:srcCompat="@drawable/song" />
 
-    <ImageView
-        android:layout_margin="20px"
-        android:id="@+id/imgFavsong"
-        android:layout_width="79dp"
-        android:layout_height="100px"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/checked" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb"
+        android:text="Yêu thích"/>
 
     <TextView
         android:id="@+id/tvSongName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:text="Song name" />
 
