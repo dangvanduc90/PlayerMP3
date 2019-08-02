@@ -1,7 +1,6 @@
 package com.example.duyphuong.playermp3.Activity;
 
 import android.annotation.TargetApi;
-import android.app.Application;
 import android.app.Dialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -9,20 +8,13 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.audiofx.AudioEffect;
-import android.media.audiofx.Equalizer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,20 +35,15 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.duyphuong.playermp3.Adapter.SongsManager;
-import com.example.duyphuong.playermp3.FavActivity;
 import com.example.duyphuong.playermp3.Model.SongModel;
 import com.example.duyphuong.playermp3.R;
-import com.example.duyphuong.playermp3.Utility.FIleUtils;
 import com.example.duyphuong.playermp3.Utility.Util;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.io.File;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener, SeekBar.OnSeekBarChangeListener, MediaPlayer.OnCompletionListener, PopupMenu.OnMenuItemClickListener {
 
@@ -535,7 +522,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         if (id == R.id.btnFav) {
             Intent intent = new Intent(this, FavActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, SELECT_SONG_REQUEST);
         }
         if (id == R.id.tvClickCustomTimer) {
             showDialogPickTimer();

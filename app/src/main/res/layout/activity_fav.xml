@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FavActivity">
+    android:orientation="vertical"
+    tools:context=".Activity.FavActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarListSongs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Danh sach bai hat"
+        android:layout_margin="3dp"
+        android:background="#999"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/lvListSong"
@@ -16,4 +30,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarListSongs" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

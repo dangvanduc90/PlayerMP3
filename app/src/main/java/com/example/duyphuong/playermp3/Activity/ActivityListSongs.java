@@ -61,18 +61,14 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
 
             @Override
             public void afterTextChanged(Editable editable) {
-
                 String keyword = editable.toString();
-//                String keyword = edtKeyword.getText().toString().trim();
                 int text_length = keyword.length();
                 ArrayList data = MainActivity.arrSong;
 
                 dataNew.clear();
                 if (text_length > 0) {
                     for (int i = 0; i < data.size(); i++) {
-
                         SongModel mCongViec = (SongModel) data.get(i);
-
                         if (mCongViec.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
                             dataNew.add(mCongViec);
                         }
@@ -101,11 +97,11 @@ public class ActivityListSongs extends AppCompatActivity implements AdapterView.
         listSongAdapter = new ListSongAdapter(this, data);
         lvListSong.setAdapter(listSongAdapter);
         lvListSong.setOnItemClickListener(this);
-
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.d("111", "aaa");
         Intent intent = new Intent();
         intent.putExtra("id", position);
 

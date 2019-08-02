@@ -17,16 +17,6 @@
         android:gravity="center"
         app:srcCompat="@drawable/song" />
 
-    <CheckBox
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/cb"
-        android:layout_weight="1"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:gravity="center"
-        android:layout_gravity="center"/>
-
     <TextView
         android:id="@+id/tvSongName"
         android:layout_width="match_parent"
